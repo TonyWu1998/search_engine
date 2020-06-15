@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Result</h1>
+    {% for paper in mypaper %}
+        <a href="http://arxiv.org/pdf/{{paper.id}}">
+            <h2 class="paper_title">{{paper.title}}</h2>
+        </a>
+        
+        <p>{{ paper.abstract }}</p>
+    {% endfor %}
+{% endblock %}

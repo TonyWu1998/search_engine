@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Papers</h1>
+    <ul class="list-group">
+    {% for paper in papers %}
+        <li class="list-group-item"><a href="http://arxiv.org/pdf/{{paper.id}}">
+            {{paper.title}}
+        </a>
+    </li> 
+    {% endfor %}
+    </ul>
+   
+{% endblock %}
