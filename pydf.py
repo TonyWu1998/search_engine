@@ -41,7 +41,7 @@ Papers = Papers()
 # app search componet
 @app.route('/search')
 def search():
-    paper = myPaper.query.whoosh_search(request.args.get('query'), like=True, limit=100).all()
+    paper = myPaper.query.whoosh_search(request.args.get('query'), limit=100).all()
     paper2 = myPaper.pure_whoosh(request.args.get('query'))
 
     '''
